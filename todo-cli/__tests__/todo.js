@@ -15,22 +15,22 @@ const tomorrow = formattedDate(
 describe("TodoList Test Suite", () => {
   beforeAll(() => {
     add({
-      title: "Task Todo",
+      title: "Todo task",
       completed: false,
       dueDate: new Date().toLocaleDateString("en-CA"),
     });
   });
-  test("add new todo", () => {
+  test(" new todo add", () => {
     const todoItemsCount = all.length;
     add({
-      title: "Submit assignment",
+      title: "Submit",
       dueDate: yesterday,
       completed: false,
     });
     expect(all.length).toBe(todoItemsCount + 1);
   });
 
-  test("mark as complete", () => {
+  test("mark  complete", () => {
     expect(all[0].completed).toBe(false);
     markAsComplete(0);
     expect(all[0].completed).toBe(true);
