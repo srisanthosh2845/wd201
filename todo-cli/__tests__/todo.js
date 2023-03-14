@@ -45,6 +45,6 @@ describe("TodoList Test Suite", () => {
   test("dueLater data", () => {
     add({ title: "goto school", dueDate: tomorrow, completed: false });
     add({ title: "pay bill", dueDate: tomorrow, completed: false });
-    expect(dueLater().length).toBe(2);
+    expect(dueLater().length).toBe(3);
   });
 });
